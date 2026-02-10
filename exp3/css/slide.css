@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "class6";
+  src: url("../assets/fonts/raphaelicons-webfont.eot") format("eot"),
+    url("../assets/fonts/raphaelicons-webfont.svg") format("svg"),
+    url("../assets/fonts/raphaelicons-webfont.woff") format("woff"),
+    url("../assets/fonts/raphaelicons-webfont.ttf") format("truetype");
+}
+
+.carousel-wrap {
+  position: relative;
+}
+
+.holder {
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  height: 500px;
+  margin: 50px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff6b9c, #6a89cc);
+  padding: 2px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.holder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: 11px;
+  z-index: 1;
+}
+
+.move {
+  position: relative;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  left: 0;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.slide {
+  width: calc(100% / 6);
+  height: 100%;
+  flex-shrink: 0;
+  padding: 60px 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.triangle {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  left: 50%;
+  top: -80px;
+  transform: translateX(-50%) rotate(45deg);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.triangle:hover {
+  transform: translateX(-50%) rotate(45deg) translateY(-8px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+.triangle::after {
+  font-size: 64px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.triangle::after {
+  content: attr(data-icon);
+  font-family: "class7";
+  font-size: 72px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slide p {
+  text-align: center;
+  color: #2c3e50;
+  position: relative;
+  z-index: 2;
+}
+
+.slide .title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 90px;
+  font-family: "华文楷体";
+}
+
+.slide .desc {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #2f855a;
+}
+
+.slide .meta {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #718096;
+}
+
+.slide .symbol {
+  margin-top: 30px;
+  font-family: "class6";
+  font-size: 72px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 30;
+}
+
+.menu a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6a89cc, #ff6b9c);
+  color: #fff;
+  text-align: center;
+  line-height: 44px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.menu a.active {
+  background: #ff4d6d;
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.5);
+}
+
+.slide .title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 100px;
+  font-family: "华文楷体";
+  color: #2c3e50;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slide .desc {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #2f855a;
+}
+
+.slide .meta {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #718096;
+}
+
+.slide .symbol {
+  margin-top: 20px;
+  font-family: "class6";
+  font-size: 64px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* 1号轮播：白→天蓝→宝蓝（柔和渐变） */
+.slide:nth-of-type(1) {
+  background: linear-gradient(135deg, #e6f7ff 0%, #87ceeb 60%, #1e90ff 100%);
+}
+
+/* 2号轮播：白→青蓝→藏青（柔和渐变） */
+.slide:nth-of-type(2) {
+  background: linear-gradient(135deg, #e0ffff 0%, #40e0d0 60%, #008080 100%);
+}
+
+/* 3号轮播：白→玫粉→紫红（柔和渐变） */
+.slide:nth-of-type(3) {
+  background: linear-gradient(135deg, #ffe6f0 0%, #ff69b4 60%, #dc143c 100%);
+}
+
+/* 4号轮播：白→嫩黄→草绿（柔和渐变） */
+.slide:nth-of-type(4) {
+  background: linear-gradient(135deg, #ffffe6 0%, #ffff99 60%, #32cd32 100%);
+}
+
+/* 5号轮播：白→橘粉→酒红（柔和渐变） */
+.slide:nth-of-type(5) {
+  background: linear-gradient(135deg, #fff0e6 0%, #ffa07a 60%, #8b0000 100%);
+}
+
+/* 6号轮播：可以加入新的主题色，如灰→蓝绿→紫色 */
+.slide:nth-of-type(6) {
+  background: linear-gradient(135deg, #f0f0f0 0%, #6a89cc 60%, #8e44ad 100%);
+}

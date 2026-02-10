@@ -1,0 +1,70 @@
+.terminal {
+  width: 100%;
+  max-width: 100%;
+}
+
+.terminal-header {
+  height: 24px;
+  background: rgba(50, 50, 70, 0.95);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.terminal-header .buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-header .button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.button.close {
+  background: #ff5f57;
+}
+
+.button.minimize {
+  background: #ffbd2e;
+}
+
+.button.maximize {
+  background: #28c840;
+}
+
+.terminal-body {
+  background: rgba(30, 30, 47, 0.95);
+  color: #cdd6f4;
+  padding: 20px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: #f5f0c2;
+  border-radius: 2px;
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}

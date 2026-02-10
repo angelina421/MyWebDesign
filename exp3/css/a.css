@@ -1,0 +1,264 @@
+/* =========================
+   主题变量（方便统一调整）
+   ========================= */
+:root {
+  --bg: #1a1a1a;
+  --panel-border: #707070;
+  --panel-bg: rgba(26, 26, 26, 0.95);
+  --muted-border: #333;
+  --input-bg: #262626;
+  --input-border: #4a4a4a;
+  --text: #eee;
+  --accent: #00bcd4;
+  --accent-strong: #00a0ad;
+  --danger: #f30b0b;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --gap: 16px;
+  --transition: 200ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+/* 基础 reset for dialog area */
+#message-dialog,
+#message-dialog-form {
+  box-sizing: border-box;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  color: var(--text);
+  background-color: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* backdrop（对话框使用 <dialog> 时） */
+#message-dialog::backdrop,
+#message-dialog-form::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+/* 标题 */
+#message-dialog-form h2 {
+  color: var(--accent);
+  margin: 0 0 14px;
+  font-size: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 10px;
+}
+
+/* 通告栏 / 跑马灯 */
+.announcement-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+/* 强调词 */
+.announcement-bar strong {
+  color: var(--danger);
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+/* 小提示 / 跑马条（滚动内容） */
+.note-marquee {
+  margin: 14px 0;
+  padding: 8px 12px;
+  border-left: 4px solid var(--accent);
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  color: var(--accent);
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 表单基础布局 */
+#message-dialog-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #dfefff;
+  font-size: 0.95rem;
+}
+
+/* 输入控件样式 */
+#message-dialog input[type="text"],
+#message-dialog input[type="email"],
+#message-dialog textarea,
+#message-dialog-form input[type="text"],
+#message-dialog-form input[type="email"],
+#message-dialog-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text);
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
+  font-size: 0.98rem;
+  outline: none;
+  transition: box-shadow var(--transition), border-color var(--transition),
+    transform var(--transition);
+}
+
+/* textarea 特性 */
+#message-dialog textarea,
+#message-dialog-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+/* focus 可访问高亮（键盘与屏幕阅读器友好） */
+#message-dialog input:focus,
+#message-dialog textarea:focus,
+#message-dialog-form input:focus,
+#message-dialog-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(0, 188, 212, 0.12);
+  transform: translateY(-1px);
+}
+
+/* 按钮组容器 */
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* 基础按钮 */
+button,
+.action-btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+}
+
+/* 主要操作按钮（发送/提交） */
+button[type="submit"],
+.action-btn.primary {
+  background-color: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 8px 22px rgba(0, 188, 212, 0.12);
+}
+
+button[type="submit"]:hover,
+.action-btn.primary:hover {
+  background-color: var(--accent-strong);
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active,
+.action-btn.primary:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(0, 188, 212, 0.09);
+}
+
+/* 取消 / 次要按钮 */
+button[value="cancel"],
+.action-btn.ghost {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+button[value="cancel"]:hover,
+.action-btn.ghost:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  transform: translateY(-1px);
+}
+
+/* 禁用态 */
+button:disabled,
+.action-btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 辅助文本、小说明 */
+.form-help {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* 响应式：窄屏时减少 padding、按钮占满宽度 */
+@media (max-width: 520px) {
+  #message-dialog,
+  #message-dialog-form {
+    padding: 18px;
+    margin: 8px;
+  }
+
+  .dialog-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  button,
+  .action-btn {
+    width: 100%;
+  }
+}
+
+/* 优化动画体验：尊重用户偏好 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* 可选：微交互——成功/错误提示（轻量） */
+.form-status {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.form-status.success {
+  background: rgba(0, 188, 212, 0.08);
+  color: var(--accent);
+  border: 1px solid rgba(0, 188, 212, 0.12);
+}
+
+.form-status.error {
+  background: rgba(255, 0, 0, 0.06);
+  color: #ff9b9b;
+  border: 1px solid rgba(255, 0, 0, 0.08);
+}
+
+#aaaa p::after {
+  content: "已更新";
+  color: #e53e3e;
+  font-size: 12px;
+  position: relative;
+  top: -8px;
+  margin-left: 6px;
+  font-weight: 600;
+}

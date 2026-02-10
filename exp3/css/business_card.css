@@ -1,0 +1,152 @@
+#business_card {
+  position: relative;
+  padding: 20px;
+  margin: auto;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+
+  border: 4px solid transparent;
+  background-clip: padding-box;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#business_card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+}
+
+#business_card img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+#business_card .subtitle {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+#business_card a {
+  margin-right: 15px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+#skill {
+  width: 50%;
+  height: 200px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+  background: #5bc6f5;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  border: 4px solid transparent;
+  background-clip: padding-box;
+}
+
+#project {
+  width: 50%;
+  height: 200px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+  background: #ffc371;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  border: 4px solid transparent;
+  background-clip: padding-box;
+}
+
+.h2_subline {
+  border-bottom: 2px solid #5c5b5b;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+#tech_details {
+  margin-top: 40px;
+  /* 确保 details 区域宽度与 container 匹配 */
+  width: 100%;
+}
+
+/* 自定义一个展开/收起图标 */
+summary::before {
+  content: "▶";
+  display: inline-block;
+  width: 1em;
+  margin-right: 10px;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-in-out;
+  color: #23a6d5; /* 使用渐变色中的蓝色作为品牌色 */
+}
+
+details[open] summary::before {
+  content: "▼";
+}
+
+/* 突出技能标题 */
+summary strong {
+  color: #2c3e50; /* 标题使用深色，保持可读性 */
+  display: inline;
+}
+
+/* 在展开时，稍微改变背景色以提供视觉反馈 */
+details[open] summary {
+  background-color: #fafafa; /* 浅灰色背景 */
+}
+
+/* 详细内容容器的样式 */
+.tech-detail-content {
+  padding: 10px 0 5px 25px;
+}
+
+.tech-detail-content p {
+  font-size: 15px;
+  color: #555; /* 统一颜色 */
+}
+
+.tech-detail-content ul {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #777; /* 统一颜色 */
+  padding-left: 0;
+}

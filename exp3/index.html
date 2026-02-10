@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angelina's Site</title>
+    <link rel="icon" href="assets\logo.svg" />
+    <link rel="stylesheet" href="css\style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <main class="layout">
+      <div class="sidebar">
+        <a href="javascript:;" data-index="0">
+          <img src="assets\svg\user.svg" alt="用户" />
+          <span>介绍</span>
+        </a>
+        <a href="javascript:;" data-index="1">
+          <img src="assets\svg\article.svg" alt="笔记" />
+          <span>笔记</span>
+        </a>
+        <a href="javascript:;" data-index="2">
+          <img src="assets\svg\images.svg" alt="摄影" />
+          <span>摄影</span>
+        </a>
+        <a href="javascript:;" data-index="3">
+          <img src="assets\svg\code.svg" alt="代码" />
+          <span>代码</span>
+        </a>
+        <a href="javascript:;" data-index="4">
+          <img src="assets\svg\message.svg" alt="留言" />
+          <span>留言</span>
+        </a>
+      </div>
+
+      <div class="content">
+        <div class="panel">
+          <div class="container">
+            <div class="header">
+              <h1>探索我的个人世界。</h1>
+              <p>
+                这里是我的数字名片，汇集了我的专业技能、实践经验和个人兴趣。
+              </p>
+            </div>
+
+            <div class="block">
+              <div id="business_card">
+                <img src="assets/images/profile/profile.jpg" alt="profile" />
+                <h2 id="card_name">Angelina</h2>
+                <p class="subtitle">电子信息工程专业在读</p>
+                <p class="contact">
+                  <a href="https://space.bilibili.com/524817583">
+                    <i class="fa-brands fa-bilibili"></i> Bilibili
+                  </a>
+                  <a href="https://github.com/angelina421" target="_blank">
+                    <i class="fa-brands fa-github"> </i> GitHub
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="info-container">
+              <div id="skill">
+                <h2 class="h2_subline">Skills</h2>
+                <ul>
+                  <li>C / C++</li>
+                  <li>Python</li>
+                  <li>HTML / CSS / JavaScript</li>
+                </ul>
+              </div>
+
+              <div id="project">
+                <h2 class="h2_subline">Projects</h2>
+                <strong>个人博客网站</strong>
+                <p>
+                  使用 HTML / CSS / JS
+                  搭建的静态网站，用于分享学习笔记和技术文章。
+                </p>
+              </div>
+            </div>
+            <div class="tech-stack-details">
+              <h2 class="h2_subline">技术栈</h2>
+              <div class="tech-card-list">
+                <div class="tech-item">
+                  <span class="tech-icon tech-backend"></span>
+                  <div class="tech-content">
+                    <h3>Web 服务与后端框架</h3>
+                    <p>
+                      专注于使用高效的 Python 框架构建稳健的 API 服务和 Web
+                      应用。
+                    </p>
+
+                    <details class="tech-more-details">
+                      <summary>核心 Web 库</summary>
+                      <div class="detail-content">
+                        <ul>
+                          <li>
+                            Django: 全功能 MVC
+                            框架，用于大型快速原型和管理系统。
+                          </li>
+                          <li>
+                            Flask: 轻量级微服务框架，适用于小型 API
+                            和定制化项目。
+                          </li>
+                          <li>Requests: 优雅且简单的 HTTP 请求库。</li>
+                        </ul>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <span class="tech-icon tech-data"></span>
+                  <div class="tech-content">
+                    <h3>数据处理与高效分析</h3>
+                    <p>
+                      利用 Python 在数据清洗、转换和统计分析方面的强大能力。
+                    </p>
+
+                    <details class="tech-more-details">
+                      <summary>核心数据科学库</summary>
+                      <div class="detail-content">
+                        <ul>
+                          <li>
+                            Pandas: 用于数据结构和数据分析的基石，处理表格数据。
+                          </li>
+                          <li>
+                            NumPy: 提供了高效的多维数组对象，是科学计算的基础。
+                          </li>
+                          <li>
+                            Matplotlib/Seaborn: 用于专业级数据可视化和绘图。
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <span class="tech-icon tech-embedded"></span>
+                  <div class="tech-content">
+                    <h3>机器学习与模型构建</h3>
+                    <p>
+                      构建、训练和部署机器学习模型，解决分类、回归和聚类问题。
+                    </p>
+
+                    <details class="tech-more-details">
+                      <summary>核心 ML/AI 库</summary>
+                      <div class="detail-content">
+                        <ul>
+                          <li>
+                            Scikit-learn:
+                            提供了大量经典的机器学习算法，易于使用。
+                          </li>
+                          <li>
+                            TensorFlow/PyTorch:
+                            深度学习框架，用于高级神经网络模型。
+                          </li>
+                          <li>Jupyter: 交互式笔记本环境，用于实验和演示。</li>
+                        </ul>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="container">
+            <div class="header">
+              <h1>我的学习笔记与技术分享</h1>
+              <p>
+                记录了我在前端、后端和硬件开发领域的学习心得和技术深度文章。
+              </p>
+            </div>
+
+            <div class="announcement-bar">
+              <strong>最新更新：</strong>
+              <marquee
+                behavior="scroll"
+                direction="left"
+                scrollamount="5"
+                style="color: #00bcd4; display: inline-block; width: 80%"
+              >
+                Vue3 响应式原理深度解析 | STM32 FreeRTOS 任务调度优化 | Pandas
+                数据清洗技巧进阶 | Docker Compose 部署实践
+              </marquee>
+            </div>
+
+            <div class="card-grid">
+              <div class="card">
+                <div class="card-content">
+                  <h3>现代前端框架精要</h3>
+                  <p>
+                    深入探讨 Vue 3 Composition API、React Hooks
+                    的使用模式和性能优化技巧。
+                  </p>
+                  <p><a href="#">查看前端系列笔记 →</a></p>
+                </div>
+                <div class="placeholder-image">
+                  <img
+                    src="../assets/images/notes/image_frontend_001.png"
+                    alt="前端代码示例"
+                  />
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <h3>C++与嵌入式系统开发</h3>
+                  <p>STM32 HAL 库详解、RTOS任务调度和内存管理的高级笔记。</p>
+                  <p><a href="#">阅读嵌入式技术文章 →</a></p>
+                </div>
+                <div class="placeholder-image">
+                  <img
+                    src="../assets/images/notes/image_cpp_002.jpg"
+                    alt="电路板示例"
+                    id="cpp-note-image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="container">
+            <div class="header">
+              <h1>用光影，捕捉世界</h1>
+              <p>探索我的数字作品集，这里汇集了关于光线、构图和故事的记录。</p>
+            </div>
+            <div class="card-grid">
+              <div class="card">
+                <div class="card-content">
+                  <h3>建筑之美：线条与空间</h3>
+                  <p>
+                    专注于城市天际线、宏伟建筑和几何细节的捕捉。通过对比和光影，展现建筑设计的力量与宁静。
+                  </p>
+                  <p>
+                    系列包含 <a href="#">现代都市</a> 和
+                    <a href="#">古典结构</a>。
+                  </p>
+                </div>
+                <div class="placeholder-image">
+                  <img
+                    src="../assets/images/architecture/image_建筑_005.jpg"
+                    alt="建筑_004"
+                  />
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <h3>自然风光：山川与河流</h3>
+                  <p>
+                    从广阔的风景到微小的生态，记录地球的原始之美。作品注重色彩的真实还原和环境氛围的营造。
+                  </p>
+                  <p><a href="#">探索自然系列 →</a></p>
+                </div>
+                <div class="placeholder-image">
+                  <img
+                    src="..\assets\images\nature\image_自然_001.jpg"
+                    alt="建筑_006"
+                  />
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <h3>萌宠特写：小猫的日常</h3>
+                  <p>
+                    捕捉猫咪调皮、慵懒和充满好奇心的瞬间。每一个镜头都力求展现小猫独特的个性和情感。
+                  </p>
+                  <p><a href="#">查看全部萌宠照片 →</a></p>
+                </div>
+                <div class="card-icons">
+                  <div class="language-icon lang-js">布偶</div>
+                  <div class="language-icon lang-php">英短</div>
+                  <div class="language-icon lang-rb">街猫</div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <h3>人文街拍：生活中的故事</h3>
+                  <p>
+                    记录街道上的人们、瞬间的情绪和转瞬即逝的文化场景。作品充满叙事性和强烈的视觉冲击。
+                  </p>
+                </div>
+                <div class="card-icons" style="flex-wrap: wrap">
+                  <div
+                    class="tool-icon tool-icon-1"
+                    title="徕卡/富士相机"
+                  ></div>
+                  <div
+                    class="tool-icon tool-icon-2"
+                    title="Lightroom后期"
+                  ></div>
+                  <div class="tool-icon tool-icon-3" title="黑白胶片风格"></div>
+                  <div class="tool-icon tool-icon-4" title="抓拍瞬间"></div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+            <br />
+
+            <div id="gallery" class="masonry">
+              <div class="photo-row-wrapper">
+                <div class="photo-row row-1">
+                  <img
+                    src="../assets/images/architecture/image_建筑_001.jpg"
+                    alt="建筑_001"
+                  />
+                  <img
+                    src="../assets/images/architecture/image_建筑_002.jpg"
+                    alt="建筑_002"
+                  />
+                  <img
+                    src="../assets/images/architecture/image_建筑_003.jpg"
+                    alt="建筑_003"
+                  />
+                  <img
+                    src="../assets/images/architecture/image_建筑_004.jpg"
+                    alt="建筑_004"
+                  />
+                  <img
+                    src="../assets/images/architecture/image_建筑_005.jpg"
+                    alt="建筑_005"
+                  />
+                  <img
+                    src="../assets/images/architecture/image_建筑_006.jpg"
+                    alt="建筑_006"
+                  />
+                  <img
+                    src="../assets/images/architecture/image_建筑_007.jpg"
+                    alt="建筑_007"
+                  />
+                  <img
+                    src="../assets/images/architecture/image_建筑_008.jpg"
+                    alt="建筑_008"
+                  />
+                  <img
+                    src="../assets/images/architecture/image_建筑_009.jpg"
+                    alt="建筑_009"
+                  />
+                  <img
+                    src="../assets/images/architecture/image_建筑_010.jpg"
+                    alt="建筑_010"
+                  />
+                </div>
+
+                <div class="photo-row row-2">
+                  <img
+                    src="../assets/images/nature/image_自然_001.jpg"
+                    alt="自然_001"
+                  />
+                  <img
+                    src="../assets/images/nature/image_自然_002.jpg"
+                    alt="自然_002"
+                  />
+                  <img
+                    src="../assets/images/nature/image_自然_003.jpg"
+                    alt="自然_003"
+                  />
+                  <img
+                    src="../assets/images/nature/image_自然_004.jpg"
+                    alt="自然_004"
+                  />
+                  <img
+                    src="../assets/images/nature/image_自然_005.jpg"
+                    alt="自然_005"
+                  />
+                  <img
+                    src="../assets/images/nature/image_自然_006.jpg"
+                    alt="自然_006"
+                  />
+                  <img
+                    src="../assets/images/nature/image_自然_007.jpg"
+                    alt="自然_007"
+                  />
+                  <img
+                    src="../assets/images/nature/image_自然_008.jpg"
+                    alt="自然_008"
+                  />
+                  <img
+                    src="../assets/images/nature/image_自然_009.jpg"
+                    alt="自然_009"
+                  />
+                  <img
+                    src="../assets/images/nature/image_自然_010.jpg"
+                    alt="自然_010"
+                  />
+                </div>
+
+                <div class="photo-row row-3">
+                  <img
+                    src="../assets/images/cat/image_猫_001.jpg"
+                    alt="猫_001"
+                  />
+                  <img
+                    src="../assets/images/cat/image_猫_002.jpg"
+                    alt="猫_002"
+                  />
+                  <img
+                    src="../assets/images/cat/image_猫_003.jpg"
+                    alt="猫_003"
+                  />
+                  <img
+                    src="../assets/images/cat/image_猫_004.jpg"
+                    alt="猫_004"
+                  />
+                  <img
+                    src="../assets/images/cat/image_猫_005.jpg"
+                    alt="猫_005"
+                  />
+                  <img
+                    src="../assets/images/cat/image_猫_006.jpg"
+                    alt="猫_006"
+                  />
+                  <img
+                    src="../assets/images/cat/image_猫_007.jpg"
+                    alt="猫_007"
+                  />
+                  <img
+                    src="../assets/images/cat/image_猫_008.jpg"
+                    alt="猫_008"
+                  />
+                  <img
+                    src="../assets/images/cat/image_猫_009.jpg"
+                    alt="猫_009"
+                  />
+                  <img
+                    src="../assets/images/cat/image_猫_010.jpg"
+                    alt="猫_010"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="container">
+            <div class="header">
+              <h1>用代码，构建世界。</h1>
+              <p>
+                探索我的编程学习路径，这里汇集了关于算法、工程和前端的实践记录。
+              </p>
+            </div>
+            <div class="header">
+              <div class="terminal" id="terminal"></div>
+            </div>
+            <div class="card-grid">
+              <div class="card">
+                <div class="card-content" id="aaaa">
+                  <h3>C 语言：系统与底层精髓</h3>
+                  <p>
+                    专注于内存管理、指针操作和数据结构的基础学习。通过实践操作系统和嵌入式项目，深入理解计算机的运行机制。
+                  </p>
+                  <p>
+                    学习重点：<a href="#">内存分配</a> 和
+                    <a href="#">数据结构</a>。
+                  </p>
+                </div>
+                <div class="placeholder-image">
+                  <img
+                    src="../assets/images/programming/c_language_code.png"
+                    alt="C语言代码片段"
+                  />
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <h3>Python:效率与数据科学</h3>
+                  <p>
+                    学习其简洁的语法和强大的库生态。重点应用在数据分析、机器学习和快速原型开发，追求开发效率。
+                  </p>
+                  <p><a href="#">探索 Pandas/NumPy 实践 →</a></p>
+                </div>
+                <div class="placeholder-image">
+                  <img
+                    src="../assets/images/programming/python_data_science.jpg"
+                    alt="Python数据分析图"
+                  />
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <h3>C++：性能怪兽与大型工程</h3>
+                  <p>
+                    掌握面向对象编程 (OOP)
+                    和模板元编程。主要用于游戏开发、高性能计算和系统级软件设计，追求极致的运行速度。
+                  </p>
+                  <p><a href="#">查看 STL 实践案例 →</a></p>
+                </div>
+                <div class="card-icons">
+                  <div class="language-icon lang-js">OOP</div>
+                  <div class="language-icon lang-php">模板</div>
+                  <div class="language-icon lang-rb">高效</div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <h3>JavaScript:前端交互与全栈</h3>
+                  <p>
+                    深入学习 ES6+ 特性和异步编程。专注于构建响应式 Web
+                    界面(React/Vue)和 Node.js 后端服务，实现完整的应用开发。
+                  </p>
+                </div>
+                <div class="card-icons" style="flex-wrap: wrap">
+                  <div class="tool-icon tool-icon-1" title="React / Vue"></div>
+                  <div class="tool-icon tool-icon-2" title="Node.js"></div>
+                  <div class="tool-icon tool-icon-3" title="ES6+"></div>
+                  <div class="tool-icon tool-icon-4" title="TypeScript"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="container">
+            <div class="header">
+              <h1>留言与互动</h1>
+              <p>通过以下方式联系我，或留下您的宝贵意见。</p>
+            </div>
+
+            <div class="card-grid">
+              <div class="card">
+                <div class="card-content">
+                  <h3>在线留言</h3>
+                  <p>点击下方按钮，打开留言表单。期待您的反馈！</p>
+                  <button class="action-btn" id="show-message-dialog">
+                    打开留言表单
+                  </button>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <h3>合作与咨询</h3>
+                  <p>请通过邮件联系我，我会尽快回复您。</p>
+                  <p><a href="mailto:contact@example.com">发送邮件 →</a></p>
+                </div>
+              </div>
+            </div>
+
+            <dialog id="message-dialog-form">
+              <h2>给我留言</h2>
+              <form method="dialog">
+                <label for="dialog-name">昵称:</label>
+                <input
+                  type="text"
+                  id="dialog-name"
+                  name="name"
+                  required
+                /><br /><br />
+
+                <label for="dialog-message">内容:</label>
+                <textarea
+                  id="dialog-message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea
+                ><br /><br />
+
+                <div class="dialog-actions">
+                  <button
+                    value="cancel"
+                    onclick="document.getElementById('message-dialog-form').close()"
+                  >
+                    取消
+                  </button>
+                  <button id="submit-dialog-message" type="submit">发送</button>
+                </div>
+              </form>
+            </dialog>
+            <div class="carousel-wrap">
+              <div class="holder">
+                <div class="move">
+                  <div class="slide">
+                    <div class="triangle" data-icon="</>"></div>
+                    <p class="title">代码与摄影</p>
+                    <p class="desc">两种语言，一种思维</p>
+                    <p class="meta">逻辑构建世界，光影记录瞬间</p>
+                    <p class="symbol">H</p>
+                  </div>
+
+                  <div class="slide">
+                    <div class="triangle" data-icon="{ }"></div>
+                    <p class="title">代码风格</p>
+                    <p class="desc">清晰胜过聪明</p>
+                    <p class="meta">结构、命名与可读性优先</p>
+                    <p class="symbol">2</p>
+                  </div>
+
+                  <div class="slide">
+                    <div class="triangle" data-icon="📷"></div>
+                    <p class="title">摄影取向</p>
+                    <p class="desc">情绪比参数重要</p>
+                    <p class="meta">光线、节奏与真实感</p>
+                    <p class="symbol">3</p>
+                  </div>
+
+                  <div class="slide">
+                    <div class="triangle" data-icon="⌘"></div>
+                    <p class="title">构图与函数</p>
+                    <p class="desc">好的设计都有留白</p>
+                    <p class="meta">主次分明，逻辑顺畅</p>
+                    <p class="symbol">4</p>
+                  </div>
+
+                  <div class="slide">
+                    <div class="triangle" data-icon="⚙"></div>
+                    <p class="title">工具观</p>
+                    <p class="desc">工具会过时，判断不会</p>
+                    <p class="meta">语言、相机、框架皆如此</p>
+                    <p class="symbol">5</p>
+                  </div>
+
+                  <div class="slide">
+                    <div class="triangle" data-icon="✉"></div>
+                    <p class="title">交流与创作</p>
+                    <p class="desc">欢迎讨论与合作</p>
+                    <p class="meta">技术 · 摄影 · 思考</p>
+                    <p class="symbol">F</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu">
+                <a data-index="0">1</a>
+                <a data-index="1">2</a>
+                <a data-index="2">3</a>
+                <a data-index="3">4</a>
+                <a data-index="4">5</a>
+                <a data-index="5">6</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

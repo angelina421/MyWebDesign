@@ -1,0 +1,120 @@
+.tech-stack-details {
+    margin-top: 40px;
+    padding: 0 15px; 
+}
+
+.h2_subline {
+    font-size: 1.5em;
+    color: #000000;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.tech-card-list {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+}
+
+.tech-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    border-left: 3px solid transparent; 
+    height: 100%; 
+}
+
+.tech-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #00bcd4; 
+}
+
+.tech-icon {
+    min-width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    background-color: #00bcd4; 
+    border-radius: 4px;
+}
+
+.tech-content {
+    flex-grow: 1; 
+}
+
+.tech-content h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #000000;
+}
+
+.tech-content p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.tech-more-details {
+    margin-top: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 0.9em;
+}
+
+.tech-more-details summary {
+    cursor: pointer;
+    padding: 5px 0;
+    color: #00bcd4; 
+    font-weight: bold;
+    list-style: none; 
+    position: relative;
+    padding-left: 20px; 
+}
+
+.tech-more-details summary::before {
+    content: '▶'; 
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 0.8em;
+    transition: transform 0.2s;
+    color: #00bcd4;
+}
+
+.tech-more-details[open] summary::before {
+    content: '▼'; 
+    transform: rotate(0deg);
+}
+
+.detail-content {
+    padding: 10px 0 5px 10px;
+    border-left: 2px solid #555; 
+    margin-left: 10px;
+}
+
+.detail-content h4 {
+    color: #000000;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.detail-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 5px 0;
+    color: #000000;
+}
+
+.detail-content ul li {
+    margin-bottom: 3px;
+}
+
+.tech-backend { background-color: #ff9800; } 
+.tech-data    { background-color: #e91e63; } 
+.tech-embedded { background-color: #2196f3; } 
+.tech-frontend { background-color: #4caf50; } 

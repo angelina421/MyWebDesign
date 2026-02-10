@@ -1,0 +1,250 @@
+@import url("details.css");
+@import url("business_card.css");
+@import url("sidebar.css");
+@import url("terminal.css");
+@import url("images.css");
+@import url("slide.css");
+@import url("a.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f5f5;
+  height: 100vh;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 0 80px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #666666;
+  margin: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+.card-content a {
+  color: #1e88e5;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+.card-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.placeholder-image {
+  height: 150px;
+  width: 200px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+.placeholder-image img {
+  display: flex;
+  align-items: center;
+  border: 8px solid white;
+  border-bottom: 20px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  transition: transform 0.3s ease, z-index 0s;
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.language-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  margin-right: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.lang-js {
+  background-color: #f7df1e;
+  color: #333;
+}
+.lang-php {
+  background-color: #8993c1;
+}
+.lang-rb {
+  background-color: #cc342d;
+}
+.lang-go {
+  background-color: #00add8;
+}
+
+.tool-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #111;
+  margin-right: 8px;
+  border: 1px solid #333;
+}
+.tool-icon-1 {
+  background-color: #000;
+}
+.tool-icon-2 {
+  background-color: #f0f0f0;
+}
+.tool-icon-3 {
+  background-color: #f26522;
+}
+.tool-icon-4 {
+  background-color: #38bdf8;
+}
+
+.note-marquee {
+  margin: 20px 0;
+  padding: 8px 15px;
+  border-left: 5px solid #00bcd4;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.note-marquee {
+  margin: 20px 0;
+  padding: 8px 15px;
+  border-left: 5px solid #00bcd4;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #3ce6da;
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.announcement-bar {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: #eee;
+}
+
+.announcement-bar strong {
+  color: #f30b0b;
+  margin-right: 15px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #0097a7;
+}
+
+#cpp-note-image {
+  border: none;
+  border-bottom: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
