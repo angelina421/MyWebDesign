@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angelina's Site</title>
+    <link rel="icon" href="assets/logo.svg" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 顶部导航栏 -->
+      <header class="navbar">
+        <!-- logo -->
+        <div class="brand">
+          <div class="brand_svg_wrapper">
+            <img src="./assets/logo.svg" class="magic_logo" alt="magic_logo" />
+          </div>
+          <span class="brand_text">Angelina的魔法屋</span>
+        </div>
+        <!-- panel导航 -->
+        <nav class="nav_group">
+          <a href="index.html" class="nav_item active">魔法学习</a>
+          <a href="./html/astrology.html" class="nav_item">星象占卜</a>
+          <a href="./html/alchemy.html" class="nav_item">药剂炼制</a>
+          <a href="./html/travel.html" class="nav_item">世界游历</a>
+          <a href="./html/friends.html" class="nav_item">结交好友</a>
+        </nav>
+      </header>
+      <div class="panel_container">
+        <!-- 1. 魔法学习 -->
+        <div id="panel1" class="panel active">
+          <!-- 题目 -->
+          <div class="header">
+            <h1 class="ancient_font">THE ETHER LIGHT</h1>
+            <p>—— 以太之光：重塑世界的隐秘法则 ——</p>
+          </div>
+
+          <!-- 学习层次 -->
+          <div class="magic_rank_wrapper">
+            <div class="chapter">
+              <h3>魔法等级</h3>
+              <p>调整滑块以选择你的魔法修炼层次</p>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="10"
+              class="magic_slider"
+              id="magicRank"
+            />
+
+            <div class="magic_rank_labels">
+              <span>NOVICE</span>
+              <span>APPRENTICE</span>
+              <span>WITCH</span>
+              <span>MAGUS</span>
+              <span>ARCHMAGE</span>
+            </div>
+
+            <div class="magic_rank_info" id="magicInfo"></div>
+          </div>
+
+          <!-- 学习内容 -->
+          <div class="card_grid">
+            <div class="card">
+              <div class="card_content_wrapper">
+                <div class="card_time">07:30 AM · 晨曦共鸣</div>
+                <h3>唤醒：以太同调</h3>
+                <p>
+                  当恒星的光芒触及地表，结束精神游离状态。饮下一杯名为“浓缩咖啡”的黑色魔药，强制同步大脑与现实世界的频率。
+                </p>
+                <div class="card_tags">
+                  <span class="tag_item">SAN值恢复</span>
+                  <span class="tag_item">魔药学</span>
+                </div>
+              </div>
+              <div class="card_image_wrapper">
+                <div class="photo_frame">
+                  <img
+                    class="card_image"
+                    src="assets\images\magic_learning\起床.jpg"
+                    alt="起床"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card_content_wrapper">
+                <div class="card_time">12:00 PM · 物质转化</div>
+                <h3>补给：膳食炼金</h3>
+                <p>
+                  将碳水化合物与蛋白质投入熔炉(胃袋)。这是一场精准的炼金仪式,将物质转化为维持肉体机能所需的纯粹魔力(Mana)。
+                </p>
+                <div class="card_tags">
+                  <span class="tag_item">能量+100</span>
+                  <span class="tag_item">生命回复</span>
+                </div>
+              </div>
+              <div class="card_image_wrapper">
+                <div class="photo_frame">
+                  <img
+                    class="card_image"
+                    src="assets\images\magic_learning\吃饭.jpg"
+                    alt="吃饭"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card_content_wrapper">
+                <div class="card_time">02:00 PM · 符文解析</div>
+                <h3>研习：真理构建</h3>
+                <p>
+                  解析世界的底层逻辑。
+                  无论是<strong>构筑核心的古老铭文</strong>,
+                  还是<strong>推演万象的灵力阵法</strong>,
+                  皆是掌控法则的必修课。
+                </p>
+
+                <div class="card_icons" style="flex-wrap: wrap">
+                  <div class="tool_icon" title="信号与系统">频域观测</div>
+                  <div class="tool_icon" title="嵌入式开发">魔导回路</div>
+                  <div class="tool_icon" title="数据结构与算法">因果演算</div>
+                </div>
+              </div>
+              <div class="card_image_wrapper">
+                <div class="photo_frame">
+                  <img
+                    class="card_image"
+                    src="assets\images\magic_learning\学习.jpg"
+                    alt="学习"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card_content_wrapper">
+                <div class="card_time">10:30 PM · 精神回廊</div>
+                <h3>休憩：虚空冥想</h3>
+                <p>
+                  卸下白日的伪装，与使魔（猫）一同潜入意识深处。在小说构建的幻境或深沉的睡眠中，等待魔力回路的完全冷却。
+                </p>
+                <div class="card_tags">
+                  <span class="tag_item">使魔撸毛</span>
+                  <span class="tag_item">进入梦境</span>
+                </div>
+              </div>
+              <div class="card_image_wrapper">
+                <div class="photo_frame">
+                  <img
+                    class="card_image"
+                    src="assets\images\magic_learning\休息.jpg"
+                    alt="休息"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>版权所有：首席炼金师 Angelina <sup>©</sup></p>
+      </footer>
+    </div>
+  </body>
+  <script type="module" src="js/main.js"></script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angelina's Site</title>
+    <link rel="icon" href="../assets/logo.svg" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script type="module" src="../js/main_travel.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 顶部导航栏 -->
+      <header class="navbar">
+        <!-- logo -->
+        <div class="brand">
+          <div class="brand_svg_wrapper">
+            <img src="../assets/logo.svg" class="magic_logo" alt="magic_logo" />
+          </div>
+          <span class="brand_text">Angelina的魔法屋</span>
+        </div>
+        <!-- panel导航 -->
+        <nav class="nav_group">
+          <a href="../index.html" class="nav_item">魔法学习</a>
+          <a href="astrology.html" class="nav_item">星象占卜</a>
+          <a href="alchemy.html" class="nav_item">药剂炼制</a>
+          <a href="travel.html" class="nav_item active">世界游历</a>
+          <a href="friends.html" class="nav_item">结交好友</a>
+        </nav>
+      </header>
+      <div class="panel_container">
+        <!-- 4. 世界游历 -->
+        <div id="panel4" class="panel active">
+          <!-- 题目 -->
+          <div class="header">
+            <h1 class="ancient_font">REALM VOYAGE</h1>
+            <p>—— 位面巡礼：记录失落的文明碎片 ——</p>
+          </div>
+
+          <!-- 世界地图 -->
+          <div class="magic_map_wrapper">
+            <div class="land_map_wrapper">
+              <div class="map_visual" id="mapStage">
+                <div class="land_map"></div>
+              </div>
+
+              <div class="location_details">
+                <h2 id="locTitle">请选择一个探索点</h2>
+                <p id="locDesc">
+                  世界在迷雾中沉睡，只有以太的光芒能指引方向...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 地区轮播 -->
+          <div class="carousel_viewport">
+            <div class="carousel_track" id="carouselTrack"></div>
+            <button class="carousel_btn prev" id="prevBtn">
+              <img src="../assets/svg/btn/left_arrow.svg" alt="left_arrow" />
+            </button>
+            <button class="carousel_btn next" id="nextBtn">
+              <img src="../assets/svg/btn/right_arrow.svg" alt="right_arrow" />
+            </button>
+
+            <div class="carousel_indicators" id="carouselIndicators"></div>
+          </div>
+
+          <br />
+        </div>
+      </div>
+      <footer>
+        <p>版权所有：首席炼金师 Angelina <sup>©</sup></p>
+      </footer>
+    </div>
+  </body>
+</html>

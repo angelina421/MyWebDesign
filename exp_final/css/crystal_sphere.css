@@ -1,0 +1,211 @@
+/* 水晶球容器 */
+.crystal_wrapper {
+  width: 100%;
+  border: none;
+}
+
+.crystal_ball {
+  height: 40rem;
+  width: auto;
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  background: url("../assets/images/magic_divine/crystal_sphere.png") no-repeat
+    center center;
+  background-size: cover;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7), 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.crystal_ball::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  pointer-events: none;
+
+  border: 1px solid rgba(255, 215, 0, 0.2);
+
+  background-image: linear-gradient(to bottom, #ffd700, transparent),
+    linear-gradient(to right, #ffd700, transparent),
+    linear-gradient(to bottom, #ffd700, transparent),
+    linear-gradient(to left, #ffd700, transparent),
+    linear-gradient(to top, #ffd700, transparent),
+    linear-gradient(to right, #ffd700, transparent),
+    linear-gradient(to top, #ffd700, transparent),
+    linear-gradient(to left, #ffd700, transparent);
+
+  background-size: 2px 25px, 25px 2px;
+  background-repeat: no-repeat;
+
+  background-position: top left, top left, top right, top right, bottom left,
+    bottom left, bottom right, bottom right;
+
+  box-shadow: inset 0 0 20px rgba(138, 43, 226, 0.1);
+  z-index: 1;
+}
+/*
+
+.orbit {
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: -110px;
+  margin-left: -110px;
+  border-radius: 50%;
+
+  position: absolute;
+  pointer-events: none;
+
+  transform-style: preserve-3d;
+}
+
+
+.star_particle {
+  width: 1rem;
+  height: 1rem;
+  top: 100%;
+  left: 50%;
+
+  position: absolute;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    100% 50%,
+    61% 65%,
+    50% 100%,
+    39% 65%,
+    0% 50%,
+    39% 35%
+  );
+}
+
+
+.orbit_1 {
+  animation: orbit-spin-1 6s linear infinite;
+}
+.orbit_1 .star_particle {
+  background: #ffd700;
+  box-shadow: 0 0 15px #ffd700;
+  animation: star-depth-1 6s linear infinite;
+}
+
+
+.orbit_2 {
+  margin-top: -90px;
+  margin-left: -90px;
+
+  animation: orbit-spin-2 8s linear infinite;
+}
+
+.orbit_2 .star_particle {
+  background: #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+  animation: star-depth-2 8s linear infinite;
+}
+
+@keyframes orbit-spin-1 {
+  from {
+    transform: rotateX(75deg) rotateY(-10deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(75deg) rotateY(-10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes star-depth-1 {
+  0% {
+    opacity: 0.6;
+
+    transform: rotateZ(360deg) rotateY(10deg) rotateX(-75deg) scale(0.8);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateZ(270deg) rotateY(10deg) rotateX(-75deg) scale(1);
+    box-shadow: 0 0 25px 5px #ffd700;
+    z-index: 20;
+  }
+  50% {
+    opacity: 0.6;
+    transform: rotateZ(180deg) rotateY(10deg) rotateX(-75deg) scale(0.8);
+  }
+  75% {
+    opacity: 0;
+    transform: rotateZ(90deg) rotateY(10deg) rotateX(-75deg) scale(0.4);
+    z-index: -10;
+  }
+  100% {
+    opacity: 0.6;
+    transform: rotateZ(0deg) rotateY(10deg) rotateX(-75deg) scale(0.8);
+  }
+}
+
+@keyframes orbit-spin-2 {
+  from {
+    transform: rotateX(135deg) rotateY(30deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(135deg) rotateY(30deg) rotateZ(360deg);
+  }
+}
+
+@keyframes star-depth-2 {
+  0% {
+    opacity: 0.6;
+    transform: rotateZ(360deg) rotateY(-60deg) rotateX(-75deg) scale(0.8);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateZ(270deg) rotateY(-60deg) rotateX(-75deg) scale(1.3);
+    box-shadow: 0 0 25px 5px #00ffff;
+    z-index: 20;
+  }
+  50% {
+    opacity: 0.6;
+    transform: rotateZ(180deg) rotateY(-60deg) rotateX(-75deg) scale(0.8);
+  }
+  75% {
+    opacity: 0;
+    transform: rotateZ(90deg) rotateY(-60deg) rotateX(-75deg) scale(0.4);
+    z-index: -10;
+  }
+  100% {
+    opacity: 0.6;
+    transform: rotateZ(0deg) rotateY(-60deg) rotateX(-75deg) scale(0.8);
+  }
+}*/
+
+.instruction_text {
+  position: relative;
+  z-index: 10;
+  margin-top: 40px;
+
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  background: linear-gradient(90deg, #ffd700, #00ffff);
+  background-clip: text;
+  color: transparent;
+
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
+}

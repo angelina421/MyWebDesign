@@ -1,0 +1,24 @@
+/* CSS 入口文件 */
+
+/* 基础 */
+@import url("./theme.css");
+@import url("./layout.css");
+@import url("./panels.css");
+
+/* 结构 */
+@import url("./magic_rank.css");
+@import url("./tarot_card.css");
+@import url("./magic_divine.css");
+@import url("./crystal_sphere.css");
+@import url("./magic_tab.css");
+
+@import url("./magic_siderbar.css");
+@import url("./magic_potions.css");
+
+@import url("./magic_map.css");
+@import url("./map_carousel.css");
+
+@import url("./magic_gallery.css");
+@import url("./magic_dialog.css");
+
+@import url("./3d.css");
