@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angelina's Site</title>
+    <link href="img/icon/icon.jpg" rel="icon" />
+    <link rel="stylesheet" href="css/rainbow.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/business_card.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="content" id="bg">
+      <div class="page" id="page">
+        <h1 class="rainbow_h1">我的第二次作业</h1>
+        <br />
+
+        <div id="input">
+          <h2 class="rainbow_h2">百变input</h2>
+          <div class="block">
+            <!-- 表单 -->
+
+            <form id="info_form">
+              <div class="form_container">
+                <!-- 姓名 -->
+                <div class="col_group">
+                  <label for="name">姓名</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="请输入姓名"
+                    required
+                  />
+                </div>
+
+                <!-- 电话 -->
+                <div class="col_group">
+                  <label for="phone">电话</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="请输入电话号码"
+                    pattern="^[0-9]{11}$"
+                    maxlength="11"
+                    required
+                  />
+                </div>
+
+                <!-- 年龄 -->
+                <div class="col_group">
+                  <label for="age">年龄</label>
+                  <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    placeholder="请输入年龄"
+                    min="0"
+                    max="120"
+                    required
+                  />
+                </div>
+
+                <!-- 日期 -->
+                <div class="col_group">
+                  <label for="birthday">生日</label>
+                  <input type="date" id="birthday" name="birthday" required />
+                </div>
+
+                <!-- 时间 -->
+                <div class="col_group">
+                  <label for="time">时间</label>
+                  <input type="time" id="time" name="time" />
+                </div>
+
+                <!-- 时刻 -->
+                <div class="col_group">
+                  <label for="datetime">时刻</label>
+                  <input type="datetime-local" id="datetime" name="datetime" />
+                </div>
+
+                <!-- 性别 -->
+                <div class="col_group">
+                  <label for="gender">性别</label>
+                  <div class="row_group">
+                    <label>
+                      <input type="radio" name="gender" value="男性" required />
+                      男性
+                    </label>
+                    <label>
+                      <input type="radio" name="gender" value="女性" required />
+                      女性
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="沃尔玛塑料袋"
+                        required
+                      />
+                      沃尔玛塑料袋
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="武装直升机"
+                        required
+                      />
+                      武装直升机
+                    </label>
+                  </div>
+                </div>
+
+                <!-- 爱好 -->
+                <div class="col_group">
+                  <label for="hobby">爱好</label>
+                  <div class="row_group">
+                    <label>
+                      <input type="checkbox" name="hobby" value="奶龙贝利亚" />
+                      奶龙贝利亚
+                    </label>
+                    <label>
+                      <input type="checkbox" name="hobby" value="永雏塔菲" />
+                      永雏塔菲
+                    </label>
+                    <label>
+                      <input type="checkbox" name="hobby" value="哈基米" />
+                      哈基米
+                    </label>
+                    <label>
+                      <input type="checkbox" name="hobby" value="阿玛特拉斯" />
+                      阿玛特拉斯
+                    </label>
+                  </div>
+                </div>
+
+                <!-- 密码 -->
+                <div class="col_group">
+                  <label for="password">密码</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="请输入密码"
+                  />
+                </div>
+
+                <!-- 重置&提交 -->
+                <div class="col_group">
+                  <label for="reset">重置&提交</label>
+                  <div class="row_group">
+                    <input type="reset" name="reset" value="重置" />
+                    <input type="submit" name="submit" value="提交" />
+                  </div>
+                </div>
+
+                <!-- 颜色选择 -->
+                <div class="col_group">
+                  <label for="color">喜欢的颜色</label>
+                  <input type="color" id="color" name="color" value="#24f0e2" />
+                </div>
+
+                <!-- 范围 -->
+                <div class="col_group">
+                  <label for="range">渐变效果</label>
+                  <input
+                    type="range"
+                    id="range"
+                    name="range"
+                    min="0"
+                    max="100"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="js">
+          <h2 class="rainbow_h2">javascript使用</h2>
+          <div class="block">
+            <div id="business_card">
+              <img src="img/profile/profile.jpg" alt="profile" />
+              <h2 id="card_name">Angelina</h2>
+              <span class="subtitle" id="card_gender">gender:male</span>
+              <span class="subtitle" id="card_age">age:20</span>
+              <span class="subtitle" id="card_phone">tel:555-555</span>
+              <p id="card_hobby">hobby: peace and love</p>
+              <p class="contact">
+                <a href="https://space.bilibili.com/524817583">
+                  <i class="fa-brands fa-bilibili"></i> Bilibili
+                </a>
+                <a href="https://github.com/angelina421" target="_blank">
+                  <i class="fa-brands fa-github"> </i> GitHub
+                </a>
+              </p>
+            </div>
+            <div class="rainbow_container">
+              <div class="rainbow_subcontainer">
+                <h2 class="rainbow_subline">Skills</h2>
+                <ul>
+                  <li>C / C++、Python、HTML / CSS / JavaScript</li>
+                  <li>Embedded Systems、Linux、Git</li>
+                  <li>Data Structures & Algorithms</li>
+                </ul>
+              </div>
+
+              <div class="rainbow_subcontainer">
+                <h2 class="rainbow_subline">Projects</h2>
+                <strong>个人博客网站</strong>
+                <p class="rainbow_p">使用 HTML / CSS / JS 搭建的静态网站</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="a_label">
+          <h2 class="rainbow_h2">a标签的使用</h2>
+          <div class="block">
+            <div class="link-list">
+              <div class="link-item csdn">
+                <a href="https://blog.csdn.net/" target="_blank">
+                  <i class="fa-solid fa-code"></i> CSDN
+                </a>
+                <p>技术博客平台，用于记录学习笔记、分享编程经验。</p>
+              </div>
+
+              <div class="link-item xiaohongshu">
+                <a
+                  href="https://www.xiaohongshu.com/user/profile"
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-book"></i> 小红书
+                </a>
+                <p>生活分享社区，用于记录日常、种草产品和表达生活态度。</p>
+              </div>
+
+              <div class="link-item github">
+                <a href="https://github.com/angelina421" target="_blank">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <p>代码托管平台，用于存储项目、开源协作与版本管理。</p>
+              </div>
+
+              <div class="link-item bilibili">
+                <a href="https://space.bilibili.com/524817583" target="_blank">
+                  <i class="fa-brands fa-bilibili"></i> Bilibili
+                </a>
+                <p>视频创作与学习平台，可分享教程、Vlog 或兴趣内容。</p>
+              </div>
+              <div class="link-item zhihu">
+                <a href="https://www.zhihu.com/people/" target="_blank">
+                  <i class="fa-brands fa-zhihu"></i> 知乎
+                </a>
+                <p>知识问答社区，分享见解、提出问题并学习他人经验。</p>
+              </div>
+            </div>
+            <a
+              href="index.html"
+              download
+              class="download-btn"
+              onclick="alert('下载已开始！')"
+            >
+              <i class="fa-solid fa-download"></i> 下载简历
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- 固定侧边工具栏 -->
+      <div class="sidebar">
+        <a href="#input" class="sidebar_item item1"></a>
+        <a href="#js" class="sidebar_item item2"></a>
+        <a href="#a_label" class="sidebar_item item3"></a>
+        <a
+          href="javascript:void(0);"
+          class="sidebar_item item4"
+          onclick="scroll_top()"
+        ></a>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

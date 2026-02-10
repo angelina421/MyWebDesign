@@ -1,0 +1,56 @@
+.sidebar {
+  position: fixed;
+  height: 200px;
+  width: 60px;
+  border: 1px solid #707070;
+  left: 17px;
+  bottom: 40px;
+  border-radius: 12px;
+  background: #1A2024;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
+  transition: transform 0.3s ease;
+}
+
+.sidebar_item {
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/sprite/sprite.png");
+  background-size: 150px 60px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 6px 0;
+  transition: background-position 0.3s ease;
+}
+
+/* 各图标初始位置（默认状态） */
+.sidebar_item.item1 {
+  background-position: 0 0;
+}
+.sidebar_item.item2 {
+  background-position: -37px 0;
+}
+.sidebar_item.item3 {
+  background-position: -76px 0;
+}
+.sidebar_item.item4 {
+  background-position: -115px 0;
+}
+
+/* 鼠标悬浮位置（hover状态） */
+.sidebar_item.item1:hover {
+  background-position: 0 -30px;
+}
+.sidebar_item.item2:hover {
+  background-position: -39px -30px;
+}
+.sidebar_item.item3:hover {
+  background-position: -77px -30px;
+}
+.sidebar_item.item4:hover {
+  background-position: -115px -30px;
+}
