@@ -1,0 +1,267 @@
+/* 卡片网格样式 */
+.card_grid {
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+@media (max-width: 48rem) {
+  .card_grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
+
+/* 单个卡片样式 */
+.card {
+  position: relative;
+  border: 0.125rem solid #d4af37;
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  min-height: 22rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background: radial-gradient(circle at center, #2c1e14 0%, #1a0f0a 100%);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5),
+    inset 0 0 1.25rem rgba(212, 175, 55, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  color: #e0d5b1;
+}
+
+/* 塔罗牌的花纹装饰 */
+.card::before {
+  content: "";
+  position: absolute;
+
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+
+  border: 0.0625rem solid rgba(212, 175, 55, 0.3);
+  pointer-events: none;
+}
+
+/* 塔罗牌的直角装饰线 */
+.card::after {
+  content: "✦";
+  position: absolute;
+
+  top: 0.75rem;
+  right: 0.75rem;
+
+  font-size: 0.8rem;
+  color: #d4af37;
+
+  opacity: 0.6;
+}
+
+/* 悬停动效 */
+.card:hover {
+  transform: translateY(-0.625rem) scale(1.02);
+  border-color: #f1d592;
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.6),
+    0 0 1.25rem rgba(212, 175, 55, 0.3);
+}
+
+.card_content_wrapper {
+  flex: 3;
+
+  padding: 2rem;
+  padding-right: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 卡片目录样式 */
+.card_content_wrapper h3 {
+  font-family: "Cinzel", "Noto Serif SC", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  text-align: center;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+
+  margin-bottom: 1.25rem;
+  border-bottom: 0.0625rem solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 0.625rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  color: #d4af37;
+}
+
+/* 塔罗牌的古典分割线 */
+.card_content_wrapper h3::after {
+  content: "———— ✦ ————";
+
+  margin-top: 0.5rem;
+
+  font-size: 0.6rem;
+
+  opacity: 0.5;
+}
+
+/* 卡片段落样式 */
+.card_content_wrapper p {
+  margin-bottom: 0.6rem;
+
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #b9bddb;
+}
+
+/* 卡片链接样式 */
+.card_content_wrapper a {
+  border-bottom: 1px solid transparent;
+
+  font-size: 0.9rem;
+  color: #5fe0b3;
+
+  transition: 0.3s;
+
+  text-decoration: none;
+}
+
+/* 卡片链接悬停效果 */
+.card_content_wrapper a:hover {
+  border-bottom-color: #5fe0b3;
+}
+
+/* 卡片时间戳 */
+.card_time {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  color: #d4af37;
+  opacity: 0.8;
+
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+/* 标签容器 */
+.card_tags {
+  margin-top: auto;
+  padding-top: 1.2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+/* 标签样式 */
+.tag_item {
+  font-size: 0.75rem;
+  font-family: "Noto Serif SC", serif;
+
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.2rem;
+
+  color: #e0d5b1;
+
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* 标签悬停发光 */
+.card:hover .tag_item {
+  border-color: rgba(212, 175, 55, 0.6);
+  background: rgba(212, 175, 55, 0.1);
+  color: #fff;
+}
+
+/* 技能标签 */
+.card_icons {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.6rem;
+
+  border-top: 1px dashed rgba(212, 175, 55, 0.2);
+}
+
+/* 技能样式 */
+.tool_icon,
+.language_icon {
+  font-size: 0.7rem;
+  font-family: monospace;
+  color: #b9bddb;
+
+  border: 1px solid rgba(185, 189, 219, 0.2);
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+}
+
+/* 卡片图片容器 */
+.card_image_wrapper {
+  flex: 2;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.5rem;
+
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* 照片相框 */
+.photo_frame {
+  position: relative;
+  width: max-content;
+  height: max-content;
+
+  padding: 6px;
+  background: #1a1a1a;
+
+  border: 4px solid #8a6e3e;
+  border-radius: 4px;
+
+  outline: 2px solid #d4af37;
+  outline-offset: -2px;
+
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8), 0 10px 20px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.4s ease;
+}
+
+/* 照片相框 */
+.card_image {
+  width: 10rem;
+  height: 14rem;
+
+  border-radius: 2px;
+
+  display: block;
+  object-fit: cover;
+
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}

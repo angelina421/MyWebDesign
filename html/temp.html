@@ -1,0 +1,374 @@
+<!-- 2. 星象占卜 -->
+<div id="panel2" class="panel">
+  <div class="header">
+    <h1 class="ancient_font">CELESTIAL DIVINATION</h1>
+    <p>—— 星象占卜：观测群星的命运轨迹 ——</p>
+  </div>
+
+  <div class="crystal_sphere_wrapper">
+    <div class="candle_container left_candle">
+      <div class="flame"></div>
+      <div class="candle_body"></div>
+      <div class="candle_base"></div>
+    </div>
+
+    <div class="center_altar">
+      <div
+        class="chapter"
+        style="
+          margin-bottom: 1rem;
+          text-align: center;
+          color: #888;
+          font-size: 0.9rem;
+        "
+      >
+        <p>凝视水晶球，默念问题，点击建立连接...</p>
+      </div>
+
+      <div class="crystal_sphere_area">
+        <div class="crystal_ball" id="crystalBall" onclick="divine()">
+          <div class="nebula_core"></div>
+          <div class="glint"></div>
+        </div>
+        <div class="divination_status" id="divineStatus">点击开始观测</div>
+      </div>
+
+      <div class="ornate_stand">
+        <div class="stand_top"></div>
+        <div class="stand_neck"></div>
+        <div class="stand_base"></div>
+      </div>
+    </div>
+
+    <div class="candle_container right_candle">
+      <div class="flame"></div>
+      <div class="candle_body"></div>
+      <div class="candle_base"></div>
+    </div>
+  </div>
+
+  <div class="divine_detail_panel" id="detailPanel">
+    <div id="placeholderState" class="detail_placeholder">
+      <div class="placeholder_symbol">✧</div>
+      <p>星图尚未展开</p>
+      <p class="sub_text">请先在上方的水晶球中寻求指引</p>
+    </div>
+
+    <div id="resultState" class="result_container" style="display: none">
+      <div class="labyrinth_tabs">
+        <button class="nav_item active" onclick="switchTab('destiny')">
+          命运相位
+        </button>
+        <button class="nav_item" onclick="switchTab('love')">金星轨迹</button>
+        <button class="nav_item" onclick="switchTab('career')">战神宫位</button>
+        <button class="nav_item" onclick="switchTab('guide')">灵性指引</button>
+      </div>
+
+      <div class="labyrinth_content_area">
+        <div id="tab-destiny" class="tab_content active">
+          <div class="library_grid">
+            <div class="library_item">
+              <div class="item_icon">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="5" />
+                  <path
+                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                  />
+                </svg>
+              </div>
+              <div class="item_text">
+                <h4>Sun in Leo (狮子座)</h4>
+                <p>
+                  太阳正行进至荣耀位置。原本迷雾重重的道路将显现轮廓。关键在于“展现自我”。
+                </p>
+                <span class="read_link">READ INTERPRETATION</span>
+              </div>
+            </div>
+            <div class="library_item">
+              <div class="item_icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="item_text">
+                <h4>Lunar Phase (月相)</h4>
+                <p>
+                  当前处于盈凸月阶段，能量正在积蓄。适合推进计划，而非草率结案。
+                </p>
+                <span class="read_link">VIEW PHASE</span>
+              </div>
+            </div>
+            <div class="library_item">
+              <div class="item_icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
+                </svg>
+              </div>
+              <div class="item_text">
+                <h4>Ascendant (上升)</h4>
+                <p>
+                  你的面具正在脱落，真实的人格魅力开始显现。外界评价将发生积极转变。
+                </p>
+                <span class="read_link">CHECK ASPECTS</span>
+              </div>
+            </div>
+            <div class="library_item">
+              <div class="item_icon">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v12M8 10l8 4M8 14l8-4" />
+                </svg>
+              </div>
+              <div class="item_text">
+                <h4>Key Advice (启示)</h4>
+                <p>
+                  不要畏惧冲突，那是打破僵局的唯一方式。保持昂首挺胸的姿态。
+                </p>
+                <span class="read_link">REVEAL TRUTH</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-love" class="tab_content">
+          <div class="library_grid">
+            <div class="library_item">
+              <div class="item_icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="item_text">
+                <h4>Venus in Pisces</h4>
+                <p>
+                  情感的水流正在向深处汇聚。如果你感觉情绪波动，那是星象在清理淤泥。
+                </p>
+                <span class="read_link">READ LOVE</span>
+              </div>
+            </div>
+            <div class="library_item">
+              <div class="item_icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <polyline points="17 11 19 13 23 9"></polyline>
+                </svg>
+              </div>
+              <div class="item_text">
+                <h4>Connection (羁绊)</h4>
+                <p>
+                  一段具有“宿命感”的邂逅可能发生在与艺术、疗愈或水源有关的场所。
+                </p>
+                <span class="read_link">VIEW MATCH</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-career" class="tab_content">
+          <div class="library_grid">
+            <div class="library_item">
+              <div class="item_icon">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div class="item_text">
+                <h4>Mars Strategy</h4>
+                <p>
+                  行动力处于曜升状态。现在不是空想的时候，而是制定严格计划的最佳时机。
+                </p>
+                <span class="read_link">VIEW STRATEGY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-guide" class="tab_content">
+          <div class="library_grid">
+            <div class="library_item">
+              <div class="item_icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
+                </svg>
+              </div>
+              <div class="item_text">
+                <h4>Daily Ritual</h4>
+                <p>今日宜：佩戴金色饰品，向南冥想。忌：签署草率的契约。</p>
+                <span class="read_link">START RITUAL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. 药剂炼制 -->
+<div id="panel3" class="panel">
+  <!-- 题目 -->
+  <div class="header">
+    <h1 class="ancient_font">ALCHEMICAL ELIXIR</h1>
+    <p>—— 灵药萃取：重现远古的炼金秘仪 ——</p>
+  </div>
+
+  <!-- 侧边栏 -->
+  <div class="sidebar">
+    <a href="#ingredients" class="sidebar_item item1" title="基础材料"></a>
+    <a href="#brewing" class="sidebar_item item2" title="炼制过程"></a>
+    <a href="#potions" class="sidebar_item item3" title="药剂成品"></a>
+    <a
+      href="javascript:void(0);"
+      class="sidebar_item item4"
+      onclick="scroll_top()"
+      title="回到炉火旁"
+    ></a>
+  </div>
+  <div class="potion-grid">
+    <div class="potion-slot active">
+      <div class="bubble-effect"></div>
+      <div class="potion-bottle">🧪</div>
+      <span>恢复药水</span>
+    </div>
+    <div class="potion-slot empty">
+      <div class="add-icon">+</div>
+      <span>待炼制</span>
+    </div>
+  </div>
+</div>
+
+<!-- 4. 世界游历 -->
+<div id="panel4" class="panel">
+  <!-- 题目 -->
+  <div class="header">
+    <h1 class="ancient_font">REALM VOYAGE</h1>
+    <p>—— 位面巡礼：记录失落的文明碎片 ——</p>
+  </div>
+
+  <!-- 世界地图 -->
+  <div class="magic_map_wrapper">
+    <div class="land_map_wrapper">
+      <div class="map_visual" id="mapStage">
+        <div class="land_map"></div>
+      </div>
+
+      <div class="location_details">
+        <h2 id="locTitle">请选择一个探索点</h2>
+        <p id="locDesc">世界在迷雾中沉睡，只有以太的光芒能指引方向...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 地区轮播 -->
+  <div class="carousel_viewport">
+    <div class="carousel_track" id="carouselTrack"></div>
+    <button class="carousel_btn prev" id="prevBtn">
+      <img src="assets\svg\btn\left_arrow.svg" alt="left_arrow" />
+    </button>
+    <button class="carousel_btn next" id="nextBtn">
+      <img src="assets\svg\btn\right_arrow.svg" alt="right_arrow" />
+    </button>
+
+    <div class="carousel_indicators" id="carouselIndicators"></div>
+  </div>
+</div>
+
+<!-- 5. 结交好友 -->
+<div id="panel5" class="panel">
+  <!-- 题目 -->
+  <div class="header">
+    <h1 class="ancient_font">FATE'S INTERTWINE</h1>
+    <p>—— 命途交织：镌刻于群星间的永恒契约 ——</p>
+  </div>
+
+  <!-- 留言区 -->
+  <div class="comment_wrapper">
+    <div class="magic_glow_circle"></div>
+
+    <div class="button_container">
+      <div class="magic_icon_top">◈</div>
+
+      <button class="ancient_btn" id="openCommentBtn">
+        <span class="btn_text">镌刻旅人箴言</span>
+        <span class="btn_flare"></span>
+      </button>
+
+      <div class="magic_subtitle">—— 汝之契约将穿透位面 ——</div>
+    </div>
+
+    <dialog class="magic_dialog" id="commentDialog">
+      <div class="scroll_content">
+        <div class="scroll_seal">◈</div>
+        <h3 class="ancient_font">魔女契约</h3>
+        <p class="scroll_subtext">—— 汝之名讳与箴言，将被位面永恒记录 ——</p>
+
+        <form method="dialog" id="commentForm">
+          <div class="magic_input_group">
+            <label>名讳 / Title</label>
+            <input
+              type="text"
+              id="userName"
+              placeholder="于此镌刻你的称号..."
+              required
+            />
+          </div>
+
+          <div class="magic_input_group">
+            <label>低语 / Whisper</label>
+            <textarea
+              id="userMsg"
+              placeholder="哪怕是一句问候，也能穿透迷雾..."
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <div class="scroll_footer">
+            <button type="button" id="closeDialogBtn" class="scroll_btn_cancel">
+              隐入阴影
+            </button>
+            <button type="submit" class="scroll_btn_confirm">确认契约</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- 照片墙 -->
+  <div class="magic_gallery_wrapper">
+    <div class="magic_photo friend_1">
+      <img src="assets\images\friends\1.jpg" alt="1" />
+      <div class="magic_dot"></div>
+      <span class="magic_info">「灰之魔女」伊蕾娜</span>
+    </div>
+
+    <div class="magic_photo friend_2">
+      <img src="assets\images\friends\2.jpg" alt="2" />
+      <div class="magic_dot"></div>
+      <span class="magic_info">「马猴烧酒」鹿目圆</span>
+    </div>
+
+    <div class="magic_photo friend_3">
+      <img src="assets\images\friends\3.jpg" alt="3" />
+      <div class="magic_dot"></div>
+      <span class="magic_info">「TIGHTER」逢坂大河</span>
+    </div>
+
+    <div class="magic_photo friend_4">
+      <img src="assets\images\friends\4.jpg" alt="4" />
+      <div class="magic_dot"></div>
+      <span class="magic_info">「下北泽大天使」虹夏</span>
+    </div>
+  </div>
+</div>

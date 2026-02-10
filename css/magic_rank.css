@@ -1,0 +1,343 @@
+/* 魔法等级容器 */
+.magic_rank_wrapper {
+  width: 85%;
+  max-width: 70rem;
+  height: 50rem;
+
+  border: 1px solid rgba(195, 163, 67, 0.3);
+  margin: 3rem auto;
+  padding: 4rem 3rem;
+  border-radius: 4px;
+
+  color: #e0d8c3;
+
+  position: relative;
+
+  background: radial-gradient(circle at center, #2a2342 0%, #13111d 80%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), inset 0 0 60px rgba(0, 0, 0, 0.8);
+
+  overflow: visible;
+}
+
+.magic_rank_wrapper::after {
+  content: "";
+
+  border: 2px solid rgba(195, 163, 67, 0.6);
+  position: absolute;
+
+  background: linear-gradient(135deg, #c3a343 10px, transparent 0) top left,
+    linear-gradient(to right, #c3a343 2px, transparent 2px) top left,
+    linear-gradient(to bottom, #c3a343 2px, transparent 2px) top left,
+    linear-gradient(-135deg, #c3a343 10px, transparent 0) top right,
+    linear-gradient(to left, #c3a343 2px, transparent 2px) top right,
+    linear-gradient(to bottom, #c3a343 2px, transparent 2px) top right,
+    linear-gradient(45deg, #c3a343 10px, transparent 0) bottom left,
+    linear-gradient(to right, #c3a343 2px, transparent 2px) bottom left,
+    linear-gradient(to top, #c3a343 2px, transparent 2px) bottom left,
+    linear-gradient(-45deg, #c3a343 10px, transparent 0) bottom right,
+    linear-gradient(to left, #c3a343 2px, transparent 2px) bottom right,
+    linear-gradient(to top, #c3a343 2px, transparent 2px) bottom right;
+
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+
+  inset: 6px;
+  pointer-events: none;
+  filter: drop-shadow(0 0 2px rgba(195, 163, 67, 0.5));
+}
+
+/* 技能卡片 */
+.skill_card {
+  border: 1px solid rgba(195, 163, 67, 0.2);
+  margin-bottom: 16px;
+  padding: 20px 24px;
+  border-radius: 8px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(30, 27, 46, 0.7) 0%,
+    rgba(15, 12, 25, 0.4) 100%
+  );
+
+  position: relative;
+
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backdrop-filter: blur(4px);
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.skill_card::before {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+
+  background: var(--rank-color, #c3a343);
+
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+/* 技能卡片动效 */
+.skill_card:hover {
+  background: linear-gradient(
+    145deg,
+    rgba(195, 163, 67, 0.1) 0%,
+    rgba(195, 163, 67, 0.02) 100%
+  );
+  border-color: rgba(195, 163, 67, 0.6);
+
+  transform: translateY(-4px) scale(1.01);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(195, 163, 67, 0.2);
+}
+
+.skill_card:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 8px var(--rank-color, #c3a343);
+}
+
+/* 技能容器 */
+.skill_header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* 图标容器 */
+.skill_icon_wrapper {
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  background: rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+/* SVG 图标样式 */
+.skill_icon_wrap svg {
+  width: 24px;
+  height: 24px;
+  fill: #e0d8c3;
+  transition: all 0.4s ease;
+}
+
+/* 技能标题 */
+.skill_title {
+  flex: 1;
+}
+
+.skill_title h5 {
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0 0 4px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 技能元素 */
+.skill_element {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* 技能效果 */
+.skill_effect {
+  margin-top: 12px;
+  padding-left: 64px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #d1d1d1;
+}
+
+.skill_effect strong {
+  color: #c3a343;
+  font-weight: normal;
+}
+
+/* 技能详情 */
+.skill_detail {
+  margin-top: 12px;
+  padding-left: 64px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+/* 技能简介关 */
+.skill_detail summary {
+  cursor: pointer;
+  list-style: none;
+  color: rgba(195, 163, 67, 0.8);
+  font-size: 0.85rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.skill_detail summary::after {
+  content: "▼";
+  font-size: 0.7em;
+  transition: transform 0.3s ease;
+}
+
+/* 技能简介开 */
+.skill_detail[open] summary {
+  color: #fff;
+  margin-bottom: 8px;
+}
+.skill_detail[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.skill_detail p {
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 10px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 0.9;
+  }
+}
+
+/* 滑块 */
+.magic_slider {
+  height: 0.45rem;
+  width: 100%;
+
+  border-radius: 1rem;
+
+  background: linear-gradient(
+    to right,
+    var(--rank-color) 0%,
+    var(--rank-color) var(--percent),
+    rgba(255, 255, 255, 0.12) var(--percent),
+    rgba(255, 255, 255, 0.12) 100%
+  );
+
+  transition: background 0.3s ease;
+
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 滑块按钮 */
+.magic_slider::-webkit-slider-thumb {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border: none;
+
+  background-image: url("../assets/svg/magic_broom.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  filter: drop-shadow(0 0 8px var(--rank-glow)); /* 魔杖发光 */
+  transition: transform 0.2s ease;
+
+  appearance: none;
+}
+
+/* 初阶：冷蓝 */
+.rank_1 {
+  --rank-color: #6fa8dc;
+  --rank-glow: rgba(111, 168, 220, 0.6);
+}
+
+/* 学徒：紫蓝 */
+.rank_2 {
+  --rank-color: #8e7cc3;
+  --rank-glow: rgba(142, 124, 195, 0.6);
+}
+
+/* 正式魔女：深紫 */
+.rank_3 {
+  --rank-color: #a64d79;
+  --rank-glow: rgba(166, 77, 121, 0.6);
+}
+
+/* 高阶法师：暗金 */
+.rank_4 {
+  --rank-color: #d4af37;
+  --rank-glow: rgba(212, 175, 55, 0.7);
+}
+
+/* 大法师：猩红以太 */
+.rank_5 {
+  --rank-color: #b22222;
+  --rank-glow: rgba(178, 34, 34, 0.7);
+}
+
+/* 魔法等级标签 */
+.magic_rank_labels {
+  padding: 0 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #d1d1d1;
+}
+
+/* 魔法等级简介 */
+.magic_rank_info {
+  margin-top: 1.8rem;
+  padding: 1.2rem 1.4rem;
+
+  border-left: 0.25rem solid var(--rank-color);
+  background: rgba(255, 255, 255, 0.04);
+
+  transition: 0.4s ease;
+}
+
+.magic_rank_info h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--rank-color);
+}
+
+.magic_rank_info p {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d6d6d6;
+}
+
+.magic_rank_info ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.magic_rank_info li {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+}
